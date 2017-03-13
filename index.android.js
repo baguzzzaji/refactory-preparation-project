@@ -9,22 +9,20 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 export default class refactoryproject extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <Text style={styles.myName}>
+          Bagus Aji Santoso
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+        <Image style={styles.myImage} source={{uri: 'https://en.gravatar.com/userimage/25928647/695aa5fa7ac7077f8769db9107c307c9.png?size=200'}}/>
+        <Text style={styles.myBatch}>
+          Batch #2
         </Text>
       </View>
     );
@@ -38,15 +36,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
+  myName: {
+    fontSize: 34,
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
+  myImage: {
+    height:240,
+    width: 240
+  },
+  myBatch: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+    fontSize: 20
   },
 });
 
